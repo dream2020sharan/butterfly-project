@@ -1,0 +1,220 @@
+body{
+    border: 1px solid black;
+}
+@font-face {
+    font-family: pacifico;
+    src: url(../fonts/Pacifico.ttf);
+ }
+header{
+    background-color: #ADD8E6;
+    height: 130px;
+    width: 100%;
+}
+
+    /*for desktop view*/
+
+@media only screen and (min-width: 769px) {
+header div:first-of-type{
+    font-family: pacifico;
+    float: left;
+    font-size: 50px;
+    padding: 10px;
+    width: 40%;
+   
+}
+header div img:hover{transition-duration: 2s;
+    transform:rotate(180deg)}
+header div:last-of-type{
+    padding:20px;	
+    float:right;
+    margin-right:10px;
+    width: 50%;
+    }
+    
+    button{
+        width: 100%;
+    }
+    input[type=password],[type=email]{
+        width: 70%;
+        float:right;
+    }
+
+    .container-article {
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+           'article1 article1 article1 article2 article2 aside aside'
+          'article3 article3 article3 article3 article3 aside aside'
+          'image image image image image aside aside'
+           ;   
+      }
+      .article1{
+          
+        background-color: #FFC83F;
+        margin: 5px;
+        grid-area: article1;
+        height: auto;
+        font-size: 20px;
+        grid-column: 1/span 3;
+        grid-row: 1;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .article2{
+          
+        background-color: #a2854c;
+        margin: 5px;
+        grid-area: article2;
+        height: auto;
+        font-size: 20px;
+        grid-column: 4/span 2;
+        grid-row: 1;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .article3{
+        background-color: #878729;
+        margin: 5px;
+        grid-area: article3;
+        height: auto;
+        font-size: 20px;
+        grid-column: 1/span 5;
+        grid-row: 2;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .article3:hover{
+          opacity: 0.8;
+      }
+      aside{
+          
+          border: 1px solid black;
+          border-radius: 15px;
+          grid-area: aside;
+          grid-column: 6/span 2;
+          grid-row: 1/span 3;
+          height: auto;
+          padding: 10px;
+          margin: 5px;   
+      }
+      aside img{
+        height: auto;
+        max-width: 100%;
+        margin: 5px;
+    }
+    aside p{
+        max-width: 100%;
+    }
+    aside:hover{box-shadow: 10px 10px 5px black}
+    .gallery{
+       
+        max-height: 100%;
+        display: flex;
+        width: auto;
+        grid-area: image;
+        margin: 5px;
+        grid-column: 1/span 5;
+        grid-row: 3;
+    }
+    .gallery img{
+        height: auto;
+        width: 95%;
+        margin: 5px;
+    }
+    footer{
+        background-color: #ADD8E6;
+       height: auto;
+       max-width: 100%;
+       text-align: center;
+       padding: 30px; 
+    }
+    footer a{ 
+        margin: 30px;
+    }
+}
+
+      /*for mobile view*/
+
+@media only screen and (max-width: 768px) {
+    header div span{
+        font-family: pacifico;
+        float: left;
+        font-size: 50px;
+        padding: 10px;
+        width: 60%;
+       
+    }
+    header div img{float: right;
+       margin: 10px;}
+    
+    header div img:hover{transition-duration: 2s;
+        transform:rotate(180deg)}
+    header div:last-of-type{
+        display: none;
+    }
+          .article1{
+            background-color: #FFC83F;
+            margin: 10px;
+            height: auto;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px;
+          }
+          .article2{ 
+            background-color: #a2854c;
+            margin: 10px;
+            height: auto;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px;
+          }
+          .article3{
+            background-color: #878729;
+            margin: 10px;
+            height: auto;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px;
+          }
+          .article3:hover{
+              opacity: 0.8;
+          }
+          aside{
+              border: 1px solid black;
+              border-radius: 15px;
+              height: auto;
+              padding: 10px;
+              margin: 10px;   
+          }
+          aside img{
+            height: auto;
+            max-width: 30%;
+            margin: 10px;
+            float: right;
+        }
+        aside p{
+            max-width: 100%;
+        }
+        .gallery{
+            max-height: 100%;
+            width: auto;
+            margin: 10px;
+            
+        }
+        .gallery img{
+            height: auto;
+            width: 100%;
+          
+        }
+        footer{
+            background-color: #ADD8E6;
+           height: auto;
+           max-width: 100%;
+           text-align: center;
+           padding: 30px; 
+        }
+        footer a{ 
+            margin: 30px;
+        }
+        footer a:nth-child(1n+4){display: none;}
+}
